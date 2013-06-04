@@ -13,9 +13,10 @@
 int Number = 1500;
 int currentMinutes;
 int currentSeconds;
+int completedPomos = 0;
 
 @interface FirstViewController : UIViewController {
-    SystemSoundID _pewPewSound;
+    SystemSoundID _alertSound;
 }
 @property (nonatomic, strong) IBOutlet UIButton *Start;
 @property (nonatomic, strong) IBOutlet UIButton *Stop;

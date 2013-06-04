@@ -26,18 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self updateTime];
 	timerType = [NSArray arrayWithObjects:@"Pomodoro",@"Break", nil];
-
-    NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
-    NSLog(@"%@", pewPewPath);
-	NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
-	AudioServicesCreateSystemSoundID((__bridge CFURLRef)pewPewURL, &_pewPewSound);
+    currentTimerType = timerType[0];
+    
+    //setup the audio sound
+    NSString *alertPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
+	NSURL *alertURL = [NSURL fileURLWithPath:alertPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)alertURL, &_alertSound);
 
 }
 
 -(IBAction)Start:(id)sender {
     [self startTimer];
-    AudioServicesPlaySystemSound(_pewPewSound);
+    AudioServicesPlaySystemSound(_alertSound);
 }
 
 -(IBAction)Stop:(id)sender {
@@ -47,19 +49,18 @@
 
 -(IBAction)Restart:(id)sender {
     Number = 1500; //25 minutes in seconds was 1500
-    AudioServicesPlaySystemSound(_pewPewSound);
+    AudioServicesPlaySystemSound(_alertSound);
 }
 
 
 -(void)startTimer {
-    currentTimerType = timerType[0];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
     [Start setEnabled:NO];
 
 }
 
 -(void)countdown {
-    Number = Number -1;
+    Number = Number -300;
     [self updateTime];
     
     if (Number <= 0) {
@@ -75,9 +76,13 @@
 }
 
 - (IBAction)timerDone {
-    
+
     int opposite = 0;
-    if (currentTimerType == timerType[0]) { opposite = 1; }
+    
+    //if a pomo was completed
+    if (currentTimerType == timerType[0]) { opposite = 1; completedPomos++;}
+
+    //if a break was completed
     else{ opposite = 0; }
     
     NSString *messageText = [NSString stringWithFormat:@"You completed a %@",currentTimerType];
@@ -96,9 +101,16 @@
 
 //What do to when dismissing the break
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    Number = 300; //full number should be 300
+    
+    if (currentTimerType == timerType[0]) {
+            Number = 300; //full number should be 300
+            currentTimerType = timerType[1];
+    }
+    else if (currentTimerType == timerType[1]) {
+        Number = 1500;
+        currentTimerType = timerType[0];
+    }
     [self startTimer];
-    currentTimerType = timerType[1];
 
 }
 
