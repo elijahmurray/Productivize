@@ -23,6 +23,8 @@
 		53852131175C061000547AF2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53852130175C061000547AF2 /* SecondViewController.m */; };
 		53852133175C061000547AF2 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 53852132175C061000547AF2 /* second.png */; };
 		53852135175C061000547AF2 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53852134175C061000547AF2 /* second@2x.png */; };
+		53F3F5EA175DA13C00F3B246 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F3F5E9175DA13C00F3B246 /* AudioToolbox.framework */; };
+		53F3F5EE175DA4DA00F3B246 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F5E8175D9D6000F3B246 /* pew-pew-lei.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,9 @@
 		53852130175C061000547AF2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		53852132175C061000547AF2 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		53852134175C061000547AF2 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		53F3F5E8175D9D6000F3B246 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		53F3F5E9175DA13C00F3B246 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		53F3F5EB175DA19200F3B246 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F3F5EA175DA13C00F3B246 /* AudioToolbox.framework in Frameworks */,
 				5385210E175C061000547AF2 /* UIKit.framework in Frameworks */,
 				53852110175C061000547AF2 /* Foundation.framework in Frameworks */,
 				53852112175C061000547AF2 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +73,8 @@
 		53852101175C061000547AF2 = {
 			isa = PBXGroup;
 			children = (
+				53F3F5EB175DA19200F3B246 /* CoreAudio.framework */,
+				53F3F5E9175DA13C00F3B246 /* AudioToolbox.framework */,
 				53852113175C061000547AF2 /* Productivize */,
 				5385210C175C061000547AF2 /* Frameworks */,
 				5385210B175C061000547AF2 /* Products */,
@@ -101,6 +109,7 @@
 				53852129175C061000547AF2 /* FirstViewController.m */,
 				5385212B175C061000547AF2 /* first.png */,
 				5385212D175C061000547AF2 /* first@2x.png */,
+				53F3F5ED175DA32300F3B246 /* Resources */,
 				5385212F175C061000547AF2 /* SecondViewController.h */,
 				53852130175C061000547AF2 /* SecondViewController.m */,
 				53852132175C061000547AF2 /* second.png */,
@@ -122,6 +131,14 @@
 				53852123175C061000547AF2 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53F3F5ED175DA32300F3B246 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53F3F5E8175D9D6000F3B246 /* pew-pew-lei.caf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F3F5EE175DA4DA00F3B246 /* pew-pew-lei.caf in Resources */,
 				53852118175C061000547AF2 /* InfoPlist.strings in Resources */,
 				53852120175C061000547AF2 /* Default.png in Resources */,
 				53852122175C061000547AF2 /* Default@2x.png in Resources */,
@@ -320,6 +338,7 @@
 				5385213A175C061000547AF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

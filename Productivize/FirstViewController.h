@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+
 
 int Number = 1500;
 int currentMinutes;
 int currentSeconds;
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController {
+    SystemSoundID _pewPewSound;
+}
 @property (nonatomic, strong) IBOutlet UIButton *Start;
 @property (nonatomic, strong) IBOutlet UIButton *Stop;
 @property (nonatomic, strong) IBOutlet UIButton *Restart;
@@ -21,6 +25,7 @@ int currentSeconds;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSArray *currentTimerType;
 @property (nonatomic, strong) NSArray *timerType;
+
 
 - (IBAction)timerDone;
 - (IBAction)Start:(id)sender;
