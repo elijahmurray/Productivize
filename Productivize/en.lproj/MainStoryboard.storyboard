@@ -84,19 +84,36 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pomos Completed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-Et-5sU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-yj-Wrx">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19" id="LuD-s1-kHm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="q34-eo-Y9G" firstAttribute="baseline" secondItem="DsL-pX-ZQ6" secondAttribute="baseline" type="default" id="5hJ-kO-cxm"/>
+                            <constraint firstItem="4Y6-yj-Wrx" firstAttribute="centerX" secondItem="R2b-Et-5sU" secondAttribute="centerX" type="default" id="6aW-PG-Wol"/>
                             <constraint firstAttribute="trailing" secondItem="DsL-pX-ZQ6" secondAttribute="trailing" constant="124" id="CMV-Xq-unr"/>
                             <constraint firstItem="q34-eo-Y9G" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="106" id="HaA-Uo-dRh"/>
                             <constraint firstItem="Pjh-6N-ygl" firstAttribute="baseline" secondItem="jzP-P2-mYh" secondAttribute="baseline" type="default" id="JLA-ZJ-51X"/>
+                            <constraint firstAttribute="bottom" secondItem="4Y6-yj-Wrx" secondAttribute="bottom" constant="113" id="NiC-Cm-ifu"/>
                             <constraint firstItem="tuR-8p-ZQ2" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="150" id="Pj9-5o-NWj"/>
                             <constraint firstItem="q34-eo-Y9G" firstAttribute="top" secondItem="16" secondAttribute="top" constant="66" id="PnJ-6i-984"/>
                             <constraint firstAttribute="trailing" secondItem="jzP-P2-mYh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="TAq-ve-PhE"/>
                             <constraint firstItem="Pjh-6N-ygl" firstAttribute="top" secondItem="16" secondAttribute="top" constant="176" id="U1n-QL-gZh"/>
+                            <constraint firstItem="4Y6-yj-Wrx" firstAttribute="top" secondItem="R2b-Et-5sU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Z7h-we-AgG"/>
                             <constraint firstItem="q34-eo-Y9G" firstAttribute="top" secondItem="DsL-pX-ZQ6" secondAttribute="top" type="default" id="fHz-P6-HBf"/>
                             <constraint firstItem="03K-EM-4Ia" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="115" id="gQA-ak-CiJ"/>
+                            <constraint firstItem="4Y6-yj-Wrx" firstAttribute="centerX" secondItem="16" secondAttribute="centerX" type="default" id="igM-lz-5el"/>
                             <constraint firstItem="DsL-pX-ZQ6" firstAttribute="centerY" secondItem="tuR-8p-ZQ2" secondAttribute="centerY" type="default" id="jer-f4-mtW"/>
                             <constraint firstItem="Pjh-6N-ygl" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="31" id="svN-Q9-4Pn"/>
                             <constraint firstAttribute="bottom" secondItem="03K-EM-4Ia" secondAttribute="bottom" constant="55" id="yYC-cL-j4X"/>
@@ -108,6 +125,7 @@
                         <outlet property="Start" destination="Pjh-6N-ygl" id="wt4-xc-xlW"/>
                         <outlet property="Stop" destination="jzP-P2-mYh" id="Cf0-og-GK8"/>
                         <outlet property="minutes" destination="q34-eo-Y9G" id="NBT-mR-n37"/>
+                        <outlet property="pomoCount" destination="4Y6-yj-Wrx" id="eqj-re-sJc"/>
                         <outlet property="seconds" destination="DsL-pX-ZQ6" id="yLc-XC-AzZ"/>
                     </connections>
                 </viewController>
@@ -189,6 +207,7 @@
                 <relationship kind="outlet" name="Start" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="Stop" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="minutes" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pomoCount" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="seconds" candidateClass="UILabel"/>
             </relationships>
         </class>

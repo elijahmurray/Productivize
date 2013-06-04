@@ -13,7 +13,7 @@
 int Number = 1500;
 int currentMinutes;
 int currentSeconds;
-int completedPomos = 0;
+int completedPomos;
 
 @interface FirstViewController : UIViewController {
     SystemSoundID _alertSound;
@@ -23,6 +23,7 @@ int completedPomos = 0;
 @property (nonatomic, strong) IBOutlet UIButton *Restart;
 @property (nonatomic, strong) IBOutlet UILabel *seconds;
 @property (nonatomic, strong) IBOutlet UILabel *minutes;
+@property (weak, nonatomic) IBOutlet UILabel *pomoCount;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSArray *currentTimerType;
 @property (nonatomic, strong) NSArray *timerType;

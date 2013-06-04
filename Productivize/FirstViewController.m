@@ -20,6 +20,7 @@
 @synthesize timer;
 @synthesize minutes;
 @synthesize seconds;
+@synthesize pomoCount;
 @synthesize currentTimerType;
 @synthesize timerType;
 
@@ -27,13 +28,11 @@
 {
     [super viewDidLoad];
     [self updateTime];
+    [self initializeAudio];
 	timerType = [NSArray arrayWithObjects:@"Pomodoro",@"Break", nil];
+
+    //set initial timer as pomodoro
     currentTimerType = timerType[0];
-    
-    //setup the audio sound
-    NSString *alertPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
-	NSURL *alertURL = [NSURL fileURLWithPath:alertPath];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)alertURL, &_alertSound);
 
 }
 
@@ -52,11 +51,16 @@
     AudioServicesPlaySystemSound(_alertSound);
 }
 
+-(void)initializeAudio {
+    //setup the audio sound
+    NSString *alertPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
+	NSURL *alertURL = [NSURL fileURLWithPath:alertPath];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)alertURL, &_alertSound);
+}
 
 -(void)startTimer {
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
     [Start setEnabled:NO];
-
 }
 
 -(void)countdown {
@@ -74,15 +78,18 @@
     minutes.text = [NSString stringWithFormat:@"%i", currentMinutes];
     seconds.text = [NSString stringWithFormat:@"%i", currentSeconds];
 }
+- (void) updatePomoCount {
+    completedPomos++;
+    pomoCount.text = [NSString stringWithFormat:@"%i",completedPomos];
+    
+}
+
 
 - (IBAction)timerDone {
-
     int opposite = 0;
     
     //if a pomo was completed
-    if (currentTimerType == timerType[0]) { opposite = 1; completedPomos++;}
-
-    //if a break was completed
+    if (currentTimerType == timerType[0]) { opposite = 1; [self updatePomoCount];}
     else{ opposite = 0; }
     
     NSString *messageText = [NSString stringWithFormat:@"You completed a %@",currentTimerType];
