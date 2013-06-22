@@ -69,7 +69,7 @@
 }
 
 -(void)countdown {
-    Number = Number -1;
+    Number = Number -5;
     [self updateTime];
     
     if (Number <= 0) {
@@ -80,8 +80,8 @@
 -(void)updateTime {
     currentMinutes = floor(Number / 60);
     currentSeconds = fmod(Number, 60);
-    minutes.text = [NSString stringWithFormat:@"%i", currentMinutes];
-    seconds.text = [NSString stringWithFormat:@"%i", currentSeconds];
+    minutes.text = [NSString stringWithFormat:@"%.2i", currentMinutes];
+    seconds.text = [NSString stringWithFormat:@"%.2i", currentSeconds];
 }
 - (void) updatePomoCount {
     completedPomos++;
