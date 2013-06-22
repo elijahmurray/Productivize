@@ -23,6 +23,16 @@
 		53852131175C061000547AF2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53852130175C061000547AF2 /* SecondViewController.m */; };
 		53852133175C061000547AF2 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 53852132175C061000547AF2 /* second.png */; };
 		53852135175C061000547AF2 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53852134175C061000547AF2 /* second@2x.png */; };
+		53C5EBE9177640E400EFBD4F /* reset-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBE8177640E400EFBD4F /* reset-btn.png */; };
+		53C5EBEB1776410300EFBD4F /* reset-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBEA1776410300EFBD4F /* reset-btn@2x.png */; };
+		53C5EBF21776615A00EFBD4F /* pause-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBEC1776615A00EFBD4F /* pause-btn.png */; };
+		53C5EBF31776615A00EFBD4F /* pause-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBED1776615A00EFBD4F /* pause-btn@2x.png */; };
+		53C5EBF41776615A00EFBD4F /* reset-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBEE1776615A00EFBD4F /* reset-btn.png */; };
+		53C5EBF51776615A00EFBD4F /* reset-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBEF1776615A00EFBD4F /* reset-btn@2x.png */; };
+		53C5EBF61776615A00EFBD4F /* start-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBF01776615A00EFBD4F /* start-btn.png */; };
+		53C5EBF71776615A00EFBD4F /* start-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBF11776615A00EFBD4F /* start-btn@2x.png */; };
+		53C5EBFA1776649A00EFBD4F /* pause-btn-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBF81776649A00EFBD4F /* pause-btn-active.png */; };
+		53C5EBFB1776649A00EFBD4F /* pause-btn-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53C5EBF91776649A00EFBD4F /* pause-btn-active@2x.png */; };
 		53F3F5EA175DA13C00F3B246 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F3F5E9175DA13C00F3B246 /* AudioToolbox.framework */; };
 		53F3F5EE175DA4DA00F3B246 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 53F3F5E8175D9D6000F3B246 /* pew-pew-lei.caf */; };
 /* End PBXBuildFile section */
@@ -50,6 +60,16 @@
 		53852130175C061000547AF2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		53852132175C061000547AF2 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		53852134175C061000547AF2 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		53C5EBE8177640E400EFBD4F /* reset-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reset-btn.png"; path = "images/reset-btn.png"; sourceTree = "<group>"; };
+		53C5EBEA1776410300EFBD4F /* reset-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reset-btn@2x.png"; path = "images/reset-btn@2x.png"; sourceTree = "<group>"; };
+		53C5EBEC1776615A00EFBD4F /* pause-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-btn.png"; path = "images/pause-btn.png"; sourceTree = "<group>"; };
+		53C5EBED1776615A00EFBD4F /* pause-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-btn@2x.png"; path = "images/pause-btn@2x.png"; sourceTree = "<group>"; };
+		53C5EBEE1776615A00EFBD4F /* reset-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reset-btn.png"; path = "images/reset-btn.png"; sourceTree = "<group>"; };
+		53C5EBEF1776615A00EFBD4F /* reset-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reset-btn@2x.png"; path = "images/reset-btn@2x.png"; sourceTree = "<group>"; };
+		53C5EBF01776615A00EFBD4F /* start-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start-btn.png"; path = "images/start-btn.png"; sourceTree = "<group>"; };
+		53C5EBF11776615A00EFBD4F /* start-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start-btn@2x.png"; path = "images/start-btn@2x.png"; sourceTree = "<group>"; };
+		53C5EBF81776649A00EFBD4F /* pause-btn-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-btn-active.png"; path = "images/pause-btn-active.png"; sourceTree = "<group>"; };
+		53C5EBF91776649A00EFBD4F /* pause-btn-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-btn-active@2x.png"; path = "images/pause-btn-active@2x.png"; sourceTree = "<group>"; };
 		53F3F5E8175D9D6000F3B246 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		53F3F5E9175DA13C00F3B246 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		53F3F5EB175DA19200F3B246 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -109,6 +129,16 @@
 				53852129175C061000547AF2 /* FirstViewController.m */,
 				5385212B175C061000547AF2 /* first.png */,
 				5385212D175C061000547AF2 /* first@2x.png */,
+				53C5EBEA1776410300EFBD4F /* reset-btn@2x.png */,
+				53C5EBE8177640E400EFBD4F /* reset-btn.png */,
+				53C5EBEC1776615A00EFBD4F /* pause-btn.png */,
+				53C5EBED1776615A00EFBD4F /* pause-btn@2x.png */,
+				53C5EBEE1776615A00EFBD4F /* reset-btn.png */,
+				53C5EBEF1776615A00EFBD4F /* reset-btn@2x.png */,
+				53C5EBF01776615A00EFBD4F /* start-btn.png */,
+				53C5EBF11776615A00EFBD4F /* start-btn@2x.png */,
+				53C5EBF81776649A00EFBD4F /* pause-btn-active.png */,
+				53C5EBF91776649A00EFBD4F /* pause-btn-active@2x.png */,
 				53F3F5ED175DA32300F3B246 /* Resources */,
 				5385212F175C061000547AF2 /* SecondViewController.h */,
 				53852130175C061000547AF2 /* SecondViewController.m */,
@@ -202,6 +232,16 @@
 				5385212E175C061000547AF2 /* first@2x.png in Resources */,
 				53852133175C061000547AF2 /* second.png in Resources */,
 				53852135175C061000547AF2 /* second@2x.png in Resources */,
+				53C5EBE9177640E400EFBD4F /* reset-btn.png in Resources */,
+				53C5EBEB1776410300EFBD4F /* reset-btn@2x.png in Resources */,
+				53C5EBF21776615A00EFBD4F /* pause-btn.png in Resources */,
+				53C5EBF31776615A00EFBD4F /* pause-btn@2x.png in Resources */,
+				53C5EBF41776615A00EFBD4F /* reset-btn.png in Resources */,
+				53C5EBF51776615A00EFBD4F /* reset-btn@2x.png in Resources */,
+				53C5EBF61776615A00EFBD4F /* start-btn.png in Resources */,
+				53C5EBF71776615A00EFBD4F /* start-btn@2x.png in Resources */,
+				53C5EBFA1776649A00EFBD4F /* pause-btn-active.png in Resources */,
+				53C5EBFB1776649A00EFBD4F /* pause-btn-active@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

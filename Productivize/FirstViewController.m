@@ -30,20 +30,25 @@
     [self updateTime];
     [self initializeAudio];
 	timerType = [NSArray arrayWithObjects:@"Pomodoro",@"Break", nil];
-
+    
     //set initial timer as pomodoro
     currentTimerType = timerType[0];
-
+    [Restart setHidden:YES];
 }
 
 -(IBAction)Start:(id)sender {
     [self startTimer];
     AudioServicesPlaySystemSound(_alertSound);
+    [Start setHidden:YES];
+    [Restart setHidden:NO];
+    
 }
 
 -(IBAction)Stop:(id)sender {
     [timer invalidate];
     [Start setEnabled:YES];
+    [Start setHidden:NO];
+    [Restart setHidden:YES];
 }
 
 -(IBAction)Restart:(id)sender {
@@ -64,7 +69,7 @@
 }
 
 -(void)countdown {
-    Number = Number -300;
+    Number = Number -1;
     [self updateTime];
     
     if (Number <= 0) {
